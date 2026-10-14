@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"  >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drea</title>
+    
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+</head>
+<body class="bg-[url(bg.png)] bg-cover bg-no-repeat dark:bg-[url(bg2.png)]">
+    <section class="flex justify-center items-center gap-[630px] pt-[20px]">
+        <div>
+            <img src="edrea_logo_crop.png" alt="" class="w-[140px] h-[65px] block dark:hidden">
+            <img src="light-logo.png" alt="" class="w-[200px] h-[75px] hidden dark:block">
+        </div>
+        <div>
+            <ul class="flex gap-[40px] no-underline list-none">
+            <li><a href="#" class=" relative  text-white dark:text-black  dark:text-[19px] transition-color duration-300s dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] inline-block after:content-['']
+            after:bg-[#fc0003]
+            after:w-full
+            after:h-[2px]
+            after:scale-x-0
+            after:absolute
+            after:top-[28px]
+            after:left-0
+            after:origin-center
+            after:transition-transform
+            after:duration-300
+            hover:after:scale-x-100">Home</a></li>
+            <li><a href="#" class=" inline-block text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] relative after:content-['']
+            after:bg-[#fc0003]
+            after:w-full
+            after:h-[2px]
+            after:scale-x-0
+            after:absolute
+            after:top-[28px]
+            after:left-0
+            after:origin-center
+            after:transition-transform
+            after:duration-300
+            hover:after:scale-x-100
+            ">About</a></li>
+            <li><a href="#" class=" inline-block  text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] relative after:content-['']
+            after:bg-[#fc0003]
+            after:w-full
+            after:h-[2px]
+            after:scale-x-0
+            after:absolute
+            after:top-[28px]
+            after:left-0
+            after:origin-center
+            after:transition-transform
+            after:duration-300
+            hover:after:scale-x-100">Portfolio</a></li>
+            <li><a href="#" class=" inline-block  text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] relative after:content-['']
+            after:bg-[#fc0003]
+            after:w-full
+            after:h-[2px]
+            after:scale-x-0
+            after:absolute
+            after:top-[28px]
+            after:left-0
+            after:origin-center
+            after:transition-transform
+            after:duration-300
+            hover:after:scale-x-100">News</a></li>
+            <li><a href="#" class=" inline-block text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] relative after:content-['']
+            after:bg-[#fc0003]
+            after:w-full
+            after:h-[2px]
+            after:scale-x-0
+            after:absolute
+            after:top-[28px]
+            after:left-0
+            after:origin-center
+            after:transition-transform
+            after:duration-300
+            hover:after:scale-x-100">Contact</a></li>
+            </ul>
+        </div>
+        
+    </section>
+    <button
+            id="theme-toggle"
+            class="border-solid border-[1px] border-[#fc0003] rounded-full px-5 py-2
+                  text-white text-[16px] bg-black hover:bg-white hover:text-black hover:border-[#fc0003] dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black transition-colors duration-300 ml-[1230px] mt-[20px]"
+          >
+            Switch to light mode
+        </button>
+    <section class="flex pl-[155px] gap-[275px] pt-[50px]">
+        <div>
+            <img src="david_parker_portrait_crop.png" alt="david picture" class="w-[470px] h-[460px] dark:hidden block ">
+            <img src="mans-photo.png" alt="david picture" class="w-[470px] h-[460px] dark:block hidden ">
+        </div>
+        <div>
+            <p class=" dark:text-black text-white  text-[50px] font-bold ">DAVID <span class="text-[#fc0003]">PARKER</span></p>
+            <P class="dark:text-black text-white  text-[25px] pt-[10px] pb-[20px]">Creative <span class="font-bold">Designer</span></P>
+            <p class="text-[#2e2c2c]">---------------------------------------------------------------------------------</p>
+            <p class=" dark:text-[#545252] text-[#aba6a6]  font-sans pt-[17px] text-[22px] pb-[40px]">My name is <span class="font-bold dark:text-[#333333] text-[#d1c9c9] ">David Parker</span>. I am a graphic designer. and<br>i'm very passionate and dedicated to my work. With 20<br>years experience as a professional graphic designer, 
+                i<br>have acquired the skills and knowledge</p>
+                <button class="outline-none border-none text-white text-[20px] font-sans font-semi-bold
+                 rounded-full px-[50px] py-[12px] bg-[#fc0003] transition-bg duration-300 transition-text duration-300  hover:bg-white hover:text-[#fc0003]">Learn More</button>
+        </div>
+    </section>
+   
+
+<script>
+  const button = document.querySelector('#theme-toggle');
+  const root = document.documentElement;
+
+  // 'theme-v2' avoids the old value saved by the previous script
+  const saved = localStorage.getItem('theme-v2') || 'dark';
+
+  // The "dark" CSS class is your LIGHT look, so add it only for light mode
+  root.classList.toggle('dark', saved === 'light');
+  button.textContent = saved === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+
+  button.addEventListener('click', () => {
+    const isLight = root.classList.toggle('dark');
+    localStorage.setItem('theme-v2', isLight ? 'light' : 'dark');
+    button.textContent = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+  });
+</script>
+</body>
+</html>
