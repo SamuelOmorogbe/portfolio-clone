@@ -7,102 +7,118 @@
     
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
+    
+
   tailwind.config = {
     darkMode: 'class'
   }
 </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
 </head>
-<body class="bg-[url(bg.png)] bg-cover bg-no-repeat dark:bg-[url(bg2.png)]">
-    <section class="flex justify-center items-center gap-[630px] pt-[20px]">
-        <div>
-            <img src="edrea_logo_crop.png" alt="" class="w-[140px] h-[65px] block dark:hidden">
-            <img src="light-logo.png" alt="" class="w-[200px] h-[75px] hidden dark:block">
+<body class="bg-[url(bg.png)] bg-cover bg-no-repeat min-h-screen dark:min-h-screen dark:bg-[url(bg2.png)]">
+    
+    <div class=" flex max-sm:block justify-center max-xl:flex gap-[40px] pt-[25px] pb-[50px] max-xl:gap-[10px] max-lg:gap-[20px] max-[769px]:gap-[20px]">
+            <div class="max-sm:flex max-sm:justify-between max-sm:fixed max-sm:top-0 max-sm:bg-[black] dark:max-sm:bg-[white] max-sm:left-0 max-sm:w-full max-sm:z-50 max-sm:px-[20px] max-sm:pb-[10px] max-sm:pt-[20px]">    
+                <section class="flex  items-center gap-[400px] pr-[30px]  max-xl:gap-[250px] max-lg:gap-[90px] max-[769px]:gap-[60px] ">
+                    <div class="pl-[80px] max-[1280px]:pl-[30px]  max-[1024px]:pl-[30px] max-[768px]:pl-[10px] ">
+                        <img src="edrea_logo_crop.png" alt="" class="w-[140px] h-[65px] max-sm:w-[90px] max-sm:h-[50px] block dark:hidden">
+                        <img src="light-logo.png" alt="" class="w-[200px] max-sm:w-[140px] max-sm:h-[60px] h-[75px] hidden dark:block">
+                    </div>
+                    <div class=" max-sm:hidden" >
+                        <ul class="flex gap-[40px] max-[769px]:gap-[20px] no-underline list-none ">
+                        <li><a href="#" class=" relative  text-white dark:text-black  dark:text-[19px] transition-color duration-300s dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[21px] max-[769px]:text-[18px] max-lg:text-[19px] inline-block after:content-['']
+                        after:bg-[#fc0003]
+                        after:w-full
+                        after:h-[2px]
+                        after:scale-x-0
+                        after:absolute
+                        after:top-[28px]
+                        after:left-0
+                        after:origin-center
+                        after:transition-transform
+                        after:duration-300
+                        hover:after:scale-x-100">Home</a></li>
+                        <li><a href="#" class=" inline-block text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[21px] max-[769px]:text-[18px] max-lg:text-[19px] relative after:content-['']
+                        after:bg-[#fc0003]
+                        after:w-full
+                        after:h-[2px]
+                        after:scale-x-0
+                        after:absolute
+                        after:top-[28px]
+                        after:left-0
+                        after:origin-center
+                        after:transition-transform
+                        after:duration-300
+                        hover:after:scale-x-100
+                        ">About</a></li>
+                        <li><a href="#" class=" inline-block  text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[21px] max-[769px]:text-[18px] max-lg:text-[19px] relative after:content-['']
+                        after:bg-[#fc0003]
+                        after:w-full
+                        after:h-[2px]
+                        after:scale-x-0
+                        after:absolute
+                        after:top-[28px]
+                        after:left-0
+                        after:origin-center
+                        after:transition-transform
+                        after:ease-in-out
+                        after:duration-300
+                        hover:after:scale-x-100">Portfolio</a></li>
+                        <li><a href="#" class=" inline-block  text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[21px] max-[769px]:text-[18px] max-lg:text-[19px] relative after:content-['']
+                        after:bg-[#fc0003]
+                        after:w-full
+                        after:h-[2px]
+                        after:scale-x-0
+                        after:absolute
+                        after:top-[28px]
+                        after:left-0
+                        after:origin-center
+                        after:transition-transform
+                        after:duration-300
+                        hover:after:scale-x-100">News</a></li>
+                        <li><a href="#" class=" inline-block text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[21px] max-[769px]:text-[18px] max-lg:text-[19px] relative after:content-['']
+                        after:bg-[#fc0003]
+                        after:w-full
+                        after:h-[2px]
+                        after:scale-x-0
+                        after:absolute
+                        after:top-[28px]
+                        after:left-0
+                        after:origin-center
+                        after:transition-transform
+                        after:duration-300
+                        hover:after:scale-x-100">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    </section>
+                    <div class="hidden max-sm:block  text-white dark:text-black  text-[30px]  pt-[7px] ">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+            </div>
+            <div class="flex justify-end items-center max-sm:block max-sm:justify-end max-sm:flex max-sm:mt-[69px] ">
+                <button
+                        id="theme-toggle"
+                        class="border-solid border-[1px] border-[#fc0003] rounded-full px-5 py-[8px] max-xl:px-[20px] max-xl:py-[10px] max-lg:px-[9px] max-[769px]:px-[13px]
+                            text-white min-w-[60px] max-xl:mt-[0px] mr-[10px]  max-lg:min-w-[10px]  text-[18px] max-[769px]:text-[14px] max-lg:text-[16px] bg-black hover:bg-white hover:text-black hover:border-[#fc0003] dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black transition-colors duration-300  max-xl:ml-[0px]  "
+                    >
+                        Switch to light mode
+                </button>
+            </div>
+            
+    </div>
+
+    <section class="flex justify-center pl-[100px] max-xl:pl-[45px] max-lg:pl-[50px] max-[769px]:pl-[20px] max-sm:pl-[20px] max-sm:pb-[20px] pr-[30px] gap-[235px] max-xl:gap-[120px] max-lg:gap-[90px] max-[769px]:gap-[50px] pt-[50px] max-xl:pt-[50px] max-sm:grid max-sm:grid-cols-1 max-sm:justify-center max-sm:justify-items-center max-sm:gap-[10px] max-sm:pt-[10px]">
+        <div class="">
+            <img src="david_parker_portrait_crop.png" alt="david picture" class="w-[470px] max-xl:w-[1000px] max-md:w-[1000px] max-sm:w-[270px] max-sm:h-[270px] h-[460px] dark:hidden block ">
+            <img src="mans-photo.png" alt="david picture" class="w-[470px]  max-xl:w-[1000px] max-sm:w-[270px] max-sm:h-[270px] h-[460px] max-md:w-[1000px] rounded-[5px] dark:block hidden ">
         </div>
-        <div>
-            <ul class="flex gap-[40px] no-underline list-none">
-            <li><a href="#" class=" relative  text-white dark:text-black  dark:text-[19px] transition-color duration-300s dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] inline-block after:content-['']
-            after:bg-[#fc0003]
-            after:w-full
-            after:h-[2px]
-            after:scale-x-0
-            after:absolute
-            after:top-[28px]
-            after:left-0
-            after:origin-center
-            after:transition-transform
-            after:duration-300
-            hover:after:scale-x-100">Home</a></li>
-            <li><a href="#" class=" inline-block text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] relative after:content-['']
-            after:bg-[#fc0003]
-            after:w-full
-            after:h-[2px]
-            after:scale-x-0
-            after:absolute
-            after:top-[28px]
-            after:left-0
-            after:origin-center
-            after:transition-transform
-            after:duration-300
-            hover:after:scale-x-100
-            ">About</a></li>
-            <li><a href="#" class=" inline-block  text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] relative after:content-['']
-            after:bg-[#fc0003]
-            after:w-full
-            after:h-[2px]
-            after:scale-x-0
-            after:absolute
-            after:top-[28px]
-            after:left-0
-            after:origin-center
-            after:transition-transform
-            after:duration-300
-            hover:after:scale-x-100">Portfolio</a></li>
-            <li><a href="#" class=" inline-block  text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] relative after:content-['']
-            after:bg-[#fc0003]
-            after:w-full
-            after:h-[2px]
-            after:scale-x-0
-            after:absolute
-            after:top-[28px]
-            after:left-0
-            after:origin-center
-            after:transition-transform
-            after:duration-300
-            hover:after:scale-x-100">News</a></li>
-            <li><a href="#" class=" inline-block text-white dark:text-black dark:text-[19px] dark:hover:text-[#fc0003] hover:text-[#fc0003] text-[19px] relative after:content-['']
-            after:bg-[#fc0003]
-            after:w-full
-            after:h-[2px]
-            after:scale-x-0
-            after:absolute
-            after:top-[28px]
-            after:left-0
-            after:origin-center
-            after:transition-transform
-            after:duration-300
-            hover:after:scale-x-100">Contact</a></li>
-            </ul>
-        </div>
-        
-    </section>
-    <button
-            id="theme-toggle"
-            class="border-solid border-[1px] border-[#fc0003] rounded-full px-5 py-2
-                  text-white text-[16px] bg-black hover:bg-white hover:text-black hover:border-[#fc0003] dark:text-black dark:bg-white dark:hover:text-white dark:hover:bg-black transition-colors duration-300 ml-[1230px] mt-[20px]"
-          >
-            Switch to light mode
-        </button>
-    <section class="flex pl-[155px] gap-[275px] pt-[50px]">
-        <div>
-            <img src="david_parker_portrait_crop.png" alt="david picture" class="w-[470px] h-[460px] dark:hidden block ">
-            <img src="mans-photo.png" alt="david picture" class="w-[470px] h-[460px] dark:block hidden ">
-        </div>
-        <div>
-            <p class=" dark:text-black text-white  text-[50px] font-bold ">DAVID <span class="text-[#fc0003]">PARKER</span></p>
-            <P class="dark:text-black text-white  text-[25px] pt-[10px] pb-[20px]">Creative <span class="font-bold">Designer</span></P>
-            <p class="text-[#2e2c2c]">---------------------------------------------------------------------------------</p>
-            <p class=" dark:text-[#545252] text-[#aba6a6]  font-sans pt-[17px] text-[22px] pb-[40px]">My name is <span class="font-bold dark:text-[#333333] text-[#d1c9c9] ">David Parker</span>. I am a graphic designer. and<br>i'm very passionate and dedicated to my work. With 20<br>years experience as a professional graphic designer, 
-                i<br>have acquired the skills and knowledge</p>
+        <div class=" max-sm:grid max-sm:justify-items-center max-sm:text-center">
+            <p class=" dark:text-black text-white  text-[50px] max-[769px]:text-[40px] max-lg:text-[45px] max-sm:text-[35px] max font-bold ">DAVID <span class="text-[#fc0003]">PARKER</span></p>
+            <P class="dark:text-black text-white  text-[25px] max-[769px]:text-[24px] max-lg:text-[23px] max-sm:text-[21px] pt-[10px] max-sm:pt-[0px] pb-[20px] max-sm:pb-[0px]">Creative <span class="font-bold">Designer</span></P>
+            <p class="text-[#2e2c2c]"><span class="max-xl:block max-lg:hidden max-[769px]:hidden hidden">-----------------------------------------------------------</span><span class="max-xl:hidden max-[769px]:hidden max-lg:hidden block">-------------------------------------------------------------------------</span><span class="max-[769px]:block max-sm:hidden hidden">----------------------------------------------</span><span class="max-lg:block  max-[769px]:hidden hidden">-------------------------------------------------------</span><span class="max-xl:hidden max-[769px]:hidden max-sm:block max-[389px]:hidden max-lg:hidden hidden max-sm:text-[#adadad] ">--------------------------------------------------</span><span class="max-xl:hidden max-[769px]:hidden max-sm:hidden max-[389px]:block max-lg:hidden hidden max-sm:text-[#adadad] ">--------------------------------------------</span></p>
+            <p class=" dark:text-[#545252] text-[#aba6a6]  font-sans pt-[17px] text-[22px] max-[769px]:text-[21px] max-lg:text-[21px] max-sm:text-[17px] pb-[40px] pr-[10px] max-[769px]:pb-[20px]">My name is <span class="font-bold dark:text-[#333333] text-[#d1c9c9] ">David Parker</span>. I am a graphic designer.<br>and i'm very passionate and dedicated to my work. <span class="max-xl:hidden"> With 20<br>years</span><span class="max-xl:inline-block hidden">With 20 years</span> experience as a professional graphic designer, 
+                <span class="max-xl:hidden ">i<br>have acquired</span><span class="max-xl:inline-block hidden">i have acquired</span> the skills and knowledge</p>
                 <button class="outline-none border-none text-white text-[20px] font-sans font-semi-bold
                  rounded-full px-[50px] py-[12px] bg-[#fc0003] transition-bg duration-300 transition-text duration-300  hover:bg-white hover:text-[#fc0003]">Learn More</button>
         </div>
@@ -110,6 +126,10 @@
    
 
 <script>
+
+   const a = window.innerWidth
+   console.log(a)
+
   const button = document.querySelector('#theme-toggle');
   const root = document.documentElement;
 
